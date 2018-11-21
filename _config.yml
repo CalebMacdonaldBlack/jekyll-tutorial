@@ -23,7 +23,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 port: 4001
 
 tiles-source: posts
-tiles-count: 6
+tiles-count: 7
 
 # Build settings
 markdown: kramdown
