@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %} 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>{{ page.title }} - {{ page.description }}</h1>
+		</header>
+		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+		<p>{{ content }}</p>
+    <footer style="position: relative; height: 45px; ">
+      {% if page.next.url %}
+        <a class="button special icon fa-arrow-left" href="{{page.next.url}}"  style="position: absolute; left: 0;">Previous Step</a>
+      {% endif %}
+      {% if page.previous.url %}
+        <a class="button special icon fa-arrow-right" href="{{page.previous.url}}" style="position: absolute; right: 0;">Next Step</a>
+      {% endif %}
+    </footer>
+	</div>
+</section>
+
+</div>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
