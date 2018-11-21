@@ -36,4 +36,4 @@ Because Jekyll pre=generates all your content it provides very cheap to host con
 
 We hope you found this tutorial useful and have enjoyed building your own Jekyll website.
 
-This entire tutorial has been built in Jekyll and can be analysed in detail from the source code.
+This entire tutorial has been built in Jekyll and hosted on Github pages. How it has been built can be analysed from the source code hosted on Github.
