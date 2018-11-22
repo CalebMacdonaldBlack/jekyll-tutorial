@@ -64,7 +64,7 @@ Now, lets check out our `mypage.md` file in our site. If you recall we gave this
 
 You should be able to see the image rendered on the page at the bottom of your other content. If you image is large it may span the full width of the page.
 
-![]()
+![The image displayed on our page](/assets/images/step5/image.png)
 
 ## Includes
 
@@ -98,7 +98,7 @@ You can add this includes snippets like this as many times as you want to any fi
 
 Refresh your tab, if it is still open, or navigate back to [http://localhost:4000/testpage](http://localhost:4000/testpage) to see how our includes has been rendered.
 
-![]()
+![The includes on our page](/assets/images/step5/includes.png)
 
 ### Extending includes
 

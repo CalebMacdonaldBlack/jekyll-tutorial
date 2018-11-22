@@ -82,7 +82,7 @@ If we head to the [home page](http://localhost:4000) of our blog we should now s
 
 If you click the post you'll see our new blank post with the `test` category in the URL.
 
- ![Our new blank post]()
+ ![Our blank post](/assets/images/step4/blank-post.png)
 
 ## Adding our content
 
@@ -136,7 +136,7 @@ To seperate sections
 
 **Save your completed content into your post and open up your post.** This is how ours looks with the content we've provided.
 
-![]()
+![Our complete post](/assets/images/step4/complete-post.png)
 
 ## Un-publishing our blog post
 

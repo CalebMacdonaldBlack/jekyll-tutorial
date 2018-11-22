@@ -89,4 +89,4 @@ Copy and paste this URL into your browser, or click [this link](http://127.0.0.1
 
 We can now explore our new website. It has a simple home page, an about page and a blog post. We'll look at how these are generated in the next step!
 
-![Our sample website](/assets/images/step1/website-preview.png)
+![Our sample website](/assets/images/step0/website-preview.png)
