@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Jekyll</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <link rel="stylesheet" href="/assets/css/workshop.css" />
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/" class="logo"><strong>Jekyll</strong> <span>Building Blocks for a Brilliant Blog</span></a>
+</header>
+ 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Step 3 - Basic configuration</h1>
+		</header>
+		
+		<p><p>The `_config.yml’ file we found in our root is very important to how Jekyll generates our website. When our site is generated all the settings for this are read from here. There are many things you can configure in this file including the theme (by default a theme was added during our default setup), special custom options required by plugins or modules and advanced technical options.</p>
+
+<p>This file is configured in a <a href="http://yaml.org/start.html">YAML format</a> and has specific requirements about its format and syntax. If you’re not familiar with the YAML format, it doesn’t matter, the file is very easy to edit without understanding the intricacies of the format.</p>
+
+<h2 id="exploring-the-_configyml-file">Exploring the <code class="highlighter-rouge">_config.yml</code> file</h2>
+
+<p>By opening the <code class="highlighter-rouge">_config.yml</code> file you’ll discover a number of interesting configuration options and an explanation of how the configuration options work of these work.</p>
+
+<p>In some cases configuration options provide simple pieces of global information which can be used throughout the website (eg. <code class="highlighter-rouge">title</code>, <code class="highlighter-rouge">email</code>, <code class="highlighter-rouge">twitter_username</code> etc.) whilst others provide the Jekyll generator useful configuration values for generating URLs (eg. <code class="highlighter-rouge">baseurl</code>, <code class="highlighter-rouge">url</code>), processing content (ie. <code class="highlighter-rouge">markdown</code>), any any custom themes (ie. <code class="highlighter-rouge">theme</code>) or ruby plugins (ie. <code class="highlighter-rouge">gems</code>) to load and apply to the generated site.</p>
+
+<p>A full list of default configuration options can be found in the <a href="https://jekyllrb.com/docs/configuration/options/">Jekyll documentation</a>. Many themes or Jekyll plugins may have their own configuration options. For example, the default theme our site is using, minima, has its all its configuration settings documented in its <a href="https://github.com/jekyll/minima">own readme</a>.</p>
+
+<h2 id="changing-the-_configyml">Changing the <code class="highlighter-rouge">_config.yml</code></h2>
+
+<p>Inside the file you’ll quickly discover the website title, description, contact email and social media custom options. We can change some of these values to demonstrate how this file is read.</p>
+
+<p><strong>Open into the file and find the lines that say:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>title: Your awesome title
+email: your-email@domain.com
+</code></pre>
+</div>
+
+<p><strong>Change the title and email associated with your nw Jekyll site by modifying these</strong>. In my example I’m going to change it as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>title: Tristan's Demo Site
+email: tristan@tristandavey.com
+</code></pre>
+</div>
+
+<h3 id="testing-your-changes">Testing your changes</h3>
+
+<p>Because this file is read during the site generation process our webpage won’t automatically update with these new settings. To apply the settings we’re going to stop the <code class="highlighter-rouge">jekyll serve</code> command we ran earlier and re-run it.</p>
+
+<p><strong>Press <em>Ctrl</em>+<em>c</em> in the terminal window running your <code class="highlighter-rouge">jekyll serve</code> command to stop it.
+Then run <code class="highlighter-rouge">jekyll serve</code> again.</strong></p>
+
+<p>If you refresh your web browser you should now see you changes! Check the title bar of the browser, as well as the site name and email shown in the footer of the website.</p>
+
+<p><img src="/assets/images/step2/new-title.png" alt="Web browser showing the new title and email address" /></p>
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+
+<p>If you have problems modifying this file when starting your server you may have an error in your configuration file. Check the the error that you are given, or consult the YAML documentation to try to find any errors.</p>
+
+</p>
+    <footer style="position: relative; height: 45px; ">
+      
+        <a class="button special icon fa-arrow-left" href="/step2"  style="position: absolute; left: 0;">Previous Step</a>
+      
+      
+        <a class="button special icon fa-arrow-right" href="/step4" style="position: absolute; right: 0;">Next Step</a>
+      
+    </footer>
+	</div>
+</section>
+
+</div>
+
+    
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+				<li>&copy; DevNQ 2018 </li>
+        <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				<li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
+        <li>The content of this workshop is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>/li>
+			</ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/skel.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Jekyll</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <link rel="stylesheet" href="/assets/css/workshop.css" />
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/" class="logo"><strong>Jekyll</strong> <span>Building Blocks for a Brilliant Blog</span></a>
+</header>
+ 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Step 1 - Getting Started</h1>
+		</header>
+		
+		<p><p>Getting started with Jekyll is super simple. In this step we’re going to get the required tools configured and create the default Jekyll site. From here we’ll get this serving from our computer and then admire our new site from a browser.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Jekyll requires your system to have a few tools to get started with building your first Jekyll website.</p>
+
+<h3 id="ruby">Ruby</h3>
+
+<p>The core Jekyll functionality uses Ruby to build your website. <strong>You’ll need Ruby 2.2.5 or higher installed to use Jekyll.</strong> You can check if Ruby is installed, or if your Ruby version is compatible by running the following on a command line:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>ruby -v
+</code></pre>
+</div>
+
+<p>Find information on installing or updating your Ruby installation on the <a href="https://www.ruby-lang.org/en/documentation/installation">official Ruby website</a>. Windows users are recommended to install using the RubyInstaller distribution.</p>
+
+<h3 id="bundler">Bundler</h3>
+
+<p>Bundler is a convenient tool for installing sets of Ruby modules and packages, called ‘Gems’. Bundler will prevent you having to individually install many dependencies and can be installed using the Ruby Gem installer once Ruby is installed on your system.</p>
+
+<p>You can easily install bundler by running this from your command line:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install bundler
+</code></pre>
+</div>
+
+<h2 id="installing-jekyll">Installing Jekyll</h2>
+
+<p>Jekyll has a command line utility containing all the tools you’ll need to get a basic Jekyll site setup and running. We’re going to install that tool using the <code class="highlighter-rouge">gem</code> utility by running the following on the command line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll
+</code></pre>
+</div>
+
+<h2 id="starting-our-first-jekyll-site">Starting our first Jekyll site</h2>
+
+<p>Now our command line utility is installed we can generate a simple Jekyll website with some default content using this tool.</p>
+
+<p>Using your command line navigate to an appropriate directory and run the following command to create a new folder called <code class="highlighter-rouge">myfirstsite</code> containing our new Jekyll site.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll new myfirstsite
+</code></pre>
+</div>
+
+<p>Lets jump into the directory this has created so we can start working with our new website.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cd myfirstsite
+</code></pre>
+</div>
+
+<h2 id="lets-see-it-in-action">Lets see it in action!</h2>
+
+<p>We’ll take a look around the content this command has generated in a second, but for the moment lets just test everything works.</p>
+
+<p>We can now use the Jekyll command line utility to build and serve our website from our computer.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
+</code></pre>
+</div>
+
+<p>This command will take a few seconds to generate your website and setup a temporary webserver on your computer so you can preview it. By default this will be a sample website that Jekyll has configured for us. But its important to check that everything is working at this point before we proceed.</p>
+
+<p>The command will output something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+            Source: /Users/tjd/src/myfirstsite
+       Destination: /Users/tjd/src/myfirstsite/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 0.393 seconds.
+ Auto-regeneration: enabled for '/Users/tjd/src/myfirstsite'
+Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+</code></pre>
+</div>
+
+<p>Most of this we won’t care about for the moment, instead, simply note the <em>Server address</em> field. This shows us that our server is running on 127.0.0.1:4000 (our local address, on port 4000).</p>
+
+<p>Copy and paste this URL into your browser, or click <a href="http://127.0.0.1:4000">this link</a> to open your new website in your browser.</p>
+
+<h2 id="our-new-website">Our new website</h2>
+
+<p>We can now explore our new website. It has a simple home page, an about page and a blog post. We’ll look at how these are generated in the next step!</p>
+
+<p><img src="/assets/images/step0/website-preview.png" alt="Our sample website" /></p>
+</p>
+    <footer style="position: relative; height: 45px; ">
+      
+      
+        <a class="button special icon fa-arrow-right" href="/step2" style="position: absolute; right: 0;">Next Step</a>
+      
+    </footer>
+	</div>
+</section>
+
+</div>
+
+    
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+				<li>&copy; DevNQ 2018 </li>
+        <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				<li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
+        <li>The content of this workshop is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>/li>
+			</ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/skel.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

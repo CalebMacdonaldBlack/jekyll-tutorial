@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-11-22T03:14:45+00:00</updated><id>/</id><title type="html">Jekyll</title><subtitle>This workshop will guide you through the basics of building a blog using Jekyll.
+</subtitle><entry><title type="html">Step 1</title><link href="/step1" rel="alternate" type="text/html" title="Step 1" /><published>2018-01-31T00:00:00+00:00</published><updated>2018-01-31T00:00:00+00:00</updated><id>/getting-started</id><content type="html" xml:base="/step1">&lt;p&gt;Getting started with Jekyll is super simple. In this step we’re going to get the required tools configured and create the default Jekyll site. From here we’ll get this serving from our computer and then admire our new site from a browser.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;Jekyll requires your system to have a few tools to get started with building your first Jekyll website.&lt;/p&gt;
+
+&lt;h3 id=&quot;ruby&quot;&gt;Ruby&lt;/h3&gt;
+
+&lt;p&gt;The core Jekyll functionality uses Ruby to build your website. &lt;strong&gt;You’ll need Ruby 2.2.5 or higher installed to use Jekyll.&lt;/strong&gt; You can check if Ruby is installed, or if your Ruby version is compatible by running the following on a command line:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Find information on installing or updating your Ruby installation on the &lt;a href=&quot;https://www.ruby-lang.org/en/documentation/installation&quot;&gt;official Ruby website&lt;/a&gt;. Windows users are recommended to install using the RubyInstaller distribution.&lt;/p&gt;
+
+&lt;h3 id=&quot;bundler&quot;&gt;Bundler&lt;/h3&gt;
+
+&lt;p&gt;Bundler is a convenient tool for installing sets of Ruby modules and packages, called ‘Gems’. Bundler will prevent you having to individually install many dependencies and can be installed using the Ruby Gem installer once Ruby is installed on your system.&lt;/p&gt;
+
+&lt;p&gt;You can easily install bundler by running this from your command line:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;installing-jekyll&quot;&gt;Installing Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Jekyll has a command line utility containing all the tools you’ll need to get a basic Jekyll site setup and running. We’re going to install that tool using the &lt;code class=&quot;highlighter-rouge&quot;&gt;gem&lt;/code&gt; utility by running the following on the command line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;starting-our-first-jekyll-site&quot;&gt;Starting our first Jekyll site&lt;/h2&gt;
+
+&lt;p&gt;Now our command line utility is installed we can generate a simple Jekyll website with some default content using this tool.&lt;/p&gt;
+
+&lt;p&gt;Using your command line navigate to an appropriate directory and run the following command to create a new folder called &lt;code class=&quot;highlighter-rouge&quot;&gt;myfirstsite&lt;/code&gt; containing our new Jekyll site.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new myfirstsite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lets jump into the directory this has created so we can start working with our new website.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd myfirstsite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;lets-see-it-in-action&quot;&gt;Lets see it in action!&lt;/h2&gt;
+
+&lt;p&gt;We’ll take a look around the content this command has generated in a second, but for the moment lets just test everything works.&lt;/p&gt;
+
+&lt;p&gt;We can now use the Jekyll command line utility to build and serve our website from our computer.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This command will take a few seconds to generate your website and setup a temporary webserver on your computer so you can preview it. By default this will be a sample website that Jekyll has configured for us. But its important to check that everything is working at this point before we proceed.&lt;/p&gt;
+
+&lt;p&gt;The command will output something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+            Source: /Users/tjd/src/myfirstsite
+       Destination: /Users/tjd/src/myfirstsite/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 0.393 seconds.
+ Auto-regeneration: enabled for '/Users/tjd/src/myfirstsite'
+Configuration file: /Users/tjd/src/myfirstsite/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Most of this we won’t care about for the moment, instead, simply note the &lt;em&gt;Server address&lt;/em&gt; field. This shows us that our server is running on 127.0.0.1:4000 (our local address, on port 4000).&lt;/p&gt;
+
+&lt;p&gt;Copy and paste this URL into your browser, or click &lt;a href=&quot;http://127.0.0.1:4000&quot;&gt;this link&lt;/a&gt; to open your new website in your browser.&lt;/p&gt;
+
+&lt;h2 id=&quot;our-new-website&quot;&gt;Our new website&lt;/h2&gt;
+
+&lt;p&gt;We can now explore our new website. It has a simple home page, an about page and a blog post. We’ll look at how these are generated in the next step!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step0/website-preview.png&quot; alt=&quot;Our sample website&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Getting started with Jekyll is super simple. In this step we’re going to get the required tools configured and create the default Jekyll site. From here we’ll get this serving from our computer and then admire our new site from a browser.</summary></entry><entry><title type="html">Step 2</title><link href="/step2" rel="alternate" type="text/html" title="Step 2" /><published>2018-01-30T00:00:00+00:00</published><updated>2018-01-30T00:00:00+00:00</updated><id>/a-quick-tour</id><content type="html" xml:base="/step2">&lt;p&gt;Next we’re going to take a quick tour of the files Jekyll has generated for us, and how that is represented in the website.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;If you open the directory you created in the last step in your file browser you should see a file structure similar to this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── Gemfile
+├── Gemfile.lock
+├── _config.yml
+├── _posts
+│   └── 2018-11-17-welcome-to-jekyll.markdown
+├── _site
+│   ├── about
+│   │   └── index.html
+│   ├── assets
+│   │   └── main.css
+│   ├── feed.xml
+│   ├── index.html
+│   └── jekyll
+│       └── update
+│           └── 2018
+│               └── 11
+│                   └── 17
+│                       └── welcome-to-jekyll.html
+├── about.md
+└── index.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Lets start exploring this structure. Open your favourite IDE or text editor and open each of the following files as we step through them.&lt;/p&gt;
+
+&lt;h2 id=&quot;gemfile-gemfilelock&quot;&gt;Gemfile, Gemfile.lock&lt;/h2&gt;
+
+&lt;p&gt;These files store information about the Ruby dependencies Jekyll needs. You can modify these if you have special requirements that require extra Jekyll components, but for the most part you don’t need to touch these files. Just ensure they are always stored with the project.&lt;/p&gt;
+
+&lt;h2 id=&quot;_configyml&quot;&gt;_config.yml&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; is our Jekyll configuration file. This contains global settings for configuring our Jekyll site and can also be used to store configuration options for optional plugins and custom themes.&lt;/p&gt;
+
+&lt;h2 id=&quot;_posts&quot;&gt;_posts&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder contains all of our blog posts or other journalled content. You’ll note that the filenames in this folder all contain dates. This is used to assist in ordering and locating the correct article. We’ll take a deeper dive into how these posts work towards the end of this workshop.&lt;/p&gt;
+
+&lt;h2 id=&quot;_site&quot;&gt;_site&lt;/h2&gt;
+
+&lt;p&gt;When we run commands that generate our site (like &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;) a copy of our site in static HTML and CSS is generated into the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory. You shouldn’t edit this directory, as any changes you make will be lost the next time the project is built. For this reason you also don’t need to store this directory as it can be generated at any time. However, the contents of this directory are what you will want to upload to a hosting service if you choose to host your site on the internet.&lt;/p&gt;
+
+&lt;p&gt;You may notice the structure of this replicates many of the names and structures of the parent Jekyll project in unusual ways. This is done to provide a cleaner directory structure for the user’s browser. If you’re not familiar with HTML and CSS the files in this folder may look like nonsense, but this is how webpages are presented to browsers on the internet, and your browser will understand whatever Jekyll generates for you.&lt;/p&gt;
+
+&lt;h2 id=&quot;aboutmd&quot;&gt;about.md&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;about.md&lt;/code&gt; houses the content for the &lt;em&gt;About&lt;/em&gt; page (http://127.0.0.1:4000/about). It is a good example of a typical page of content in a Jekyll site. We’ll look at it in the next step.&lt;/p&gt;
+
+&lt;h2 id=&quot;indexmd&quot;&gt;index.md&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;index.md&lt;/code&gt; generates the basic homepage. This has been left deliberately empty in our installation except for a few lines at the top. We’ll explain what these lines do, and why this file is empty later.&lt;/p&gt;</content><author><name></name></author><summary type="html">Next we’re going to take a quick tour of the files Jekyll has generated for us, and how that is represented in the website.</summary></entry><entry><title type="html">Step 3</title><link href="/step3" rel="alternate" type="text/html" title="Step 3" /><published>2018-01-29T00:00:00+00:00</published><updated>2018-01-29T00:00:00+00:00</updated><id>/basic-configuration</id><content type="html" xml:base="/step3">&lt;p&gt;The `_config.yml’ file we found in our root is very important to how Jekyll generates our website. When our site is generated all the settings for this are read from here. There are many things you can configure in this file including the theme (by default a theme was added during our default setup), special custom options required by plugins or modules and advanced technical options.&lt;/p&gt;
+
+&lt;p&gt;This file is configured in a &lt;a href=&quot;http://yaml.org/start.html&quot;&gt;YAML format&lt;/a&gt; and has specific requirements about its format and syntax. If you’re not familiar with the YAML format, it doesn’t matter, the file is very easy to edit without understanding the intricacies of the format.&lt;/p&gt;
+
+&lt;h2 id=&quot;exploring-the-_configyml-file&quot;&gt;Exploring the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file&lt;/h2&gt;
+
+&lt;p&gt;By opening the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file you’ll discover a number of interesting configuration options and an explanation of how the configuration options work of these work.&lt;/p&gt;
+
+&lt;p&gt;In some cases configuration options provide simple pieces of global information which can be used throughout the website (eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;email&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;twitter_username&lt;/code&gt; etc.) whilst others provide the Jekyll generator useful configuration values for generating URLs (eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;), processing content (ie. &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;), any any custom themes (ie. &lt;code class=&quot;highlighter-rouge&quot;&gt;theme&lt;/code&gt;) or ruby plugins (ie. &lt;code class=&quot;highlighter-rouge&quot;&gt;gems&lt;/code&gt;) to load and apply to the generated site.&lt;/p&gt;
+
+&lt;p&gt;A full list of default configuration options can be found in the &lt;a href=&quot;https://jekyllrb.com/docs/configuration/options/&quot;&gt;Jekyll documentation&lt;/a&gt;. Many themes or Jekyll plugins may have their own configuration options. For example, the default theme our site is using, minima, has its all its configuration settings documented in its &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;own readme&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-the-_configyml&quot;&gt;Changing the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Inside the file you’ll quickly discover the website title, description, contact email and social media custom options. We can change some of these values to demonstrate how this file is read.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open into the file and find the lines that say:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title: Your awesome title
+email: your-email@domain.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Change the title and email associated with your nw Jekyll site by modifying these&lt;/strong&gt;. In my example I’m going to change it as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title: Tristan's Demo Site
+email: tristan@tristandavey.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;testing-your-changes&quot;&gt;Testing your changes&lt;/h3&gt;
+
+&lt;p&gt;Because this file is read during the site generation process our webpage won’t automatically update with these new settings. To apply the settings we’re going to stop the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; command we ran earlier and re-run it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Press &lt;em&gt;Ctrl&lt;/em&gt;+&lt;em&gt;c&lt;/em&gt; in the terminal window running your &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; command to stop it.
+Then run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; again.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you refresh your web browser you should now see you changes! Check the title bar of the browser, as well as the site name and email shown in the footer of the website.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step2/new-title.png&quot; alt=&quot;Web browser showing the new title and email address&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h4&gt;
+
+&lt;p&gt;If you have problems modifying this file when starting your server you may have an error in your configuration file. Check the the error that you are given, or consult the YAML documentation to try to find any errors.&lt;/p&gt;</content><author><name></name></author><summary type="html">The `_config.yml’ file we found in our root is very important to how Jekyll generates our website. When our site is generated all the settings for this are read from here. There are many things you can configure in this file including the theme (by default a theme was added during our default setup), special custom options required by plugins or modules and advanced technical options.</summary></entry><entry><title type="html">Step 4</title><link href="/step4" rel="alternate" type="text/html" title="Step 4" /><published>2018-01-28T00:00:00+00:00</published><updated>2018-01-28T00:00:00+00:00</updated><id>/creating-our-first-page</id><content type="html" xml:base="/step4">&lt;p&gt;To first understand how Jekyll pages are structured, we’re going to have a look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;about.md&lt;/code&gt; page. This page represents a typical page in a Jekyll site.&lt;/p&gt;
+
+&lt;p&gt;Lets jump into the &lt;code class=&quot;highlighter-rouge&quot;&gt;about.md&lt;/code&gt; page and take a look at how the data is structured and formatted.&lt;/p&gt;
+
+&lt;h2 id=&quot;page-structure&quot;&gt;Page Structure&lt;/h2&gt;
+
+&lt;p&gt;Each page, and blog post conforms to the same structure. It has the &lt;em&gt;frontmatter&lt;/em&gt; at the top of the document, and the rest of the content following this. We’ll have a look at the &lt;em&gt;frontmatter&lt;/em&gt; and &lt;em&gt;content&lt;/em&gt; sections to determine what these are used for and how they are formatted.&lt;/p&gt;
+
+&lt;h3 id=&quot;frontmatter&quot;&gt;Frontmatter&lt;/h3&gt;
+
+&lt;p&gt;At the top of the file you’ll find several lines between two lines of dashes (&lt;code class=&quot;highlighter-rouge&quot;&gt;---&lt;/code&gt;) This is called &lt;em&gt;frontmatter&lt;/em&gt; and the content between these lines is used to help configure the page’s settings. The data between these lines is also YAML and works similarly to our &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file. Lets have a look at the properties we have here.&lt;/p&gt;
+
+&lt;h4 id=&quot;layout&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;em&gt;layout&lt;/em&gt; property determines how the page generated by Jekyll looks. Most Jekyll themes have a set of basic layouts they implement &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;home&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;post&lt;/code&gt;, however, theme authors can create as many or as few layouts as they wish.&lt;/p&gt;
+
+&lt;p&gt;Different layouts may only slightly differ, or may have completely different formats all dependent on on how the theme author has chosen to implement them . For example a &lt;code class=&quot;highlighter-rouge&quot;&gt;post&lt;/code&gt; layout may list information like the post title, author, date published, along with a link to the next blog post at the bottom whilst a page may only show the title.&lt;/p&gt;
+
+&lt;h4 id=&quot;title&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;em&gt;title&lt;/em&gt; property determines the title of the page, not only what is shown in the Browser title bar, but also what the page may show as the title. Title is not a default frontmatter tag, but is implemented by most themes as a&lt;/p&gt;
+
+&lt;h4 id=&quot;permalink&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt; property helps the Jekyll generator generate search-engine friendly URLS by letting you set a custom URL path this page will be available at.&lt;/p&gt;
+
+&lt;h4 id=&quot;more-about-frontmatter&quot;&gt;More about frontmatter&lt;/h4&gt;
+
+&lt;p&gt;As well as these there are other default frontmatter tags for both pages and posts. There are also some caveats to frontmatter and how it can be used. For more information check out the &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;official Jekyll Frontmatter documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;content&quot;&gt;Content&lt;/h3&gt;
+
+&lt;p&gt;The content of a Jekyll page or post is all of the content below the frontmatter. This is formatted in a special formatting language called &lt;em&gt;markdown&lt;/em&gt; (hence why these files have the &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt; extension)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Markdown&lt;/em&gt; is very easy to quickly understand. With markdown you can format text, add images, links, lists, quotes, tables and headings. If you’re not familiar with it you can undertake a quick tutorial to understand the basics of Markdown at &lt;a href=&quot;https://www.markdowntutorial.com&quot;&gt;markdowntutorial.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you’re familiar with HTML you can also create pages for Jekyll in HTML (by using a &lt;code class=&quot;highlighter-rouge&quot;&gt;.htm&lt;/code&gt;) extension. You can also mix most basic HTML tags into &lt;em&gt;markdown&lt;/em&gt; content if you’re trying to add more complex content.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-our-own-page&quot;&gt;Creating our own page&lt;/h2&gt;
+
+&lt;p&gt;Now we’re familiar with the &lt;em&gt;About&lt;/em&gt; page lets create our own page and demonstrate what we’ve learnt about Jekyll pages.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-the-file&quot;&gt;Setting up the file&lt;/h3&gt;
+
+&lt;p&gt;First lets create a file for our new page.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a new file in the root directory of our jekyll site and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;mypage.md&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re going to &lt;strong&gt;add some basic content to the page first&lt;/strong&gt;. The page needs to have a frontmatter section, but we won’t set anything in it for now. Try adding some content to the page, here is some basic placeholder markdown to get you started:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+---
+
+# My test page
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Jekyll will automatically detect the presence of this page and add it to our site. You can view it here: &lt;a href=&quot;http://localhost:4000/mypage/&quot;&gt;http://localhost:4000/mypage/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;!A basic Jekyll page without a layout](/assets/images/step3/no-layout.png)&lt;/p&gt;
+
+&lt;p&gt;You’ll note this page looks pretty basic and doesn’t have the theme applied. This is because we haven’t used a layout from the theme. We’ll set this up in the next section.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-our-frontmatter&quot;&gt;Setting up our frontmatter&lt;/h3&gt;
+
+&lt;h4 id=&quot;setting-a-layout&quot;&gt;Setting a layout&lt;/h4&gt;
+
+&lt;p&gt;First thing’s first for our new page, lets get it looking pretty. In the last step we created a page without a layout. Now lets setup our frontmatter to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt; layout the &lt;code class=&quot;highlighter-rouge&quot;&gt;about.md&lt;/code&gt; pager was using earlier.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Change the frontmatter of your new page to include the &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt; layout option.&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: page
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If we now jump back to &lt;a href=&quot;http://localhost:4000/mypage/&quot;&gt;our page&lt;/a&gt; we can see that the default page layout we saw on the &lt;em&gt;About&lt;/em&gt; page has also been applied to this page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step3/page-layout.png&quot; alt=&quot;A basic Jekyll page using the default page layout&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;setting-a-title&quot;&gt;Setting a title&lt;/h4&gt;
+
+&lt;p&gt;Adding a title is important as this adds a title which can be shown in a browser taskbar, is indexed by search engines and can be shown by Jekyll’s automatically generated navigation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Add a title to the frontmatter of your page.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: page
+title: Test Page
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This time, lets go to our &lt;a href=&quot;http://localhost:4000&quot;&gt;home page&lt;/a&gt;. Because there is a page title to be shown, our page has automatically been included in the site’s navigation, at the top tight of the page, by Jekyll. Clicking the link in the top right will now take us through to our page.&lt;/p&gt;
+
+&lt;h4 id=&quot;setting-a-permalink&quot;&gt;Setting a permalink&lt;/h4&gt;
+
+&lt;p&gt;Finally we’ll test setting the permalink of our page. This can be useful in overriding the default url of a page to something which is more search-engine or use friendly, and can help you keep your pages organised without being limited by how they must be named.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lets add a permalink property to our frontmatter and set it to something easy to remember. For ease lets set it to &lt;code class=&quot;highlighter-rouge&quot;&gt;testpage&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: page
+title: Test Page
+permalink: testpage
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now our &lt;a href=&quot;http://localhost:4000/mypage/&quot;&gt;old link&lt;/a&gt; will no longer work, but our page will be available at our new url: &lt;a href=&quot;http://localhost:4000/testpage/&quot;&gt;http://localhost:4000/testpage/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The end result should be our new page, showing our content in the theme’s &lt;code class=&quot;highlighter-rouge&quot;&gt;page&lt;/code&gt; layout with our title, a navigation link and a our custom permalink.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step3/final.png&quot; alt=&quot;Our complete page&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">To first understand how Jekyll pages are structured, we’re going to have a look at the about.md page. This page represents a typical page in a Jekyll site.</summary></entry><entry><title type="html">Step 5</title><link href="/step5" rel="alternate" type="text/html" title="Step 5" /><published>2018-01-27T00:00:00+00:00</published><updated>2018-01-27T00:00:00+00:00</updated><id>/Building-our-blog</id><content type="html" xml:base="/step5">&lt;p&gt;In this step we’re going to create a blog post. This process is very similar to creating a page, but posts have a different filename format and different frontmatter.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-file-for-our-post&quot;&gt;Creating a file for our post&lt;/h2&gt;
+
+&lt;p&gt;We mentioned earlier that posts are added to the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory of our Jekyll site. But they also have to be created with a specific filename format to help Jekyll understand how to order them.&lt;/p&gt;
+
+&lt;p&gt;The blog post filename format includes a date at the start of the filename formatted as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;YYYY-MM-DD-&amp;lt;blog-post-filename&amp;gt;.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This date is generally used to denote the publish date of an article or blog post, allowing you to create files for blog posts at any time but allowing them to always be ordered correctly for Jekyll. For example we may publish a blog post on November 22nd 2018 about Monty Python. We would name that file &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-11-22-monty-python.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a file with November 14th 2018’s date called ‘Yet Another Post’.&lt;/strong&gt; This file should be named &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-11-14-yet-another-post.md&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-frontmatter&quot;&gt;Adding frontmatter&lt;/h2&gt;
+
+&lt;p&gt;If we have a look at the frontmatter of the default post &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-11-22-welcome-to-jekyll.markdown&lt;/code&gt; we’ll find the following frontmatter:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title:  &quot;Welcome to Jekyll!&quot;
+date:   2018-11-17 21:48:29 +1000
+categories: jekyll update
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;post-frontmatter-properties&quot;&gt;Post Frontmatter Properties&lt;/h3&gt;
+
+&lt;p&gt;We’re going to use this as a basis for our own frontmatter. We’re already familiar with the &lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; properties in frontmatter, but lets have a look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;categories&lt;/code&gt; fields. We’ll also have a look a frontmatter field we haven’t seen before &lt;code class=&quot;highlighter-rouge&quot;&gt;published&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;date&quot;&gt;Date&lt;/h4&gt;
+
+&lt;p&gt;The date field allows you to set a high-precision time and date for the time which will be shown on the posts when they are displayed on the website.&lt;/p&gt;
+
+&lt;p&gt;The date field takes the form of a time and date in the &lt;a href=&quot;http://yaml.org/type/timestamp.html&quot;&gt;YAML datetime format&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;YYYY-MM-DD HH:MM:SS +/-TZ
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If a timezone is not specified the time is assumed to be in UTC.&lt;/p&gt;
+
+&lt;h4 id=&quot;categories&quot;&gt;Categories&lt;/h4&gt;
+
+&lt;p&gt;Categories help configure the URL scheme of a post and can help you categorise your posts, or even run multiple blogs on a single Jekyll site. The category property is simply a space seperated list of strings which will be added as a path in the post URL.&lt;/p&gt;
+
+&lt;p&gt;For example the default post above, with the categories ‘jekyll’ and ‘update’ has the following URL generated by Jekyll:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://localhost:4000/jekyll/update/2018/11/22/welcome-to-jekyll.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;published&quot;&gt;Published&lt;/h4&gt;
+
+&lt;p&gt;Published is a simple boolean flag that determines if a post is published to the website. By setting this to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; you can publish draft posts which can’t be viewed to by users.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-our-frontmatter&quot;&gt;Setting our frontmatter&lt;/h3&gt;
+
+&lt;p&gt;Now that we understand a bit more about our posts frontmatter we’re going to setup some frontmatter for our first new blog post.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Setup a post called ‘Yet another blog post’, published November 14th 2018 at 11pm UTC, with the category ‘test’.&lt;/strong&gt; This is what your frontmatter should look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title:  Yet another blog post
+date:   2018-11-14 23:00:00
+categories: test
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If we head to the &lt;a href=&quot;http://localhost:4000&quot;&gt;home page&lt;/a&gt; of our blog we should now see our new post listed below the ‘Welcome to Jekyll!’ post which was published today. By default this list shows all categories, but you can customise to show only one, or only a few categories.&lt;/p&gt;
+
+&lt;p&gt;If you click the post you’ll see our new blank post with the &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; category in the URL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step4/blank-post.png&quot; alt=&quot;Our blank post&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-our-content&quot;&gt;Adding our content&lt;/h2&gt;
+
+&lt;p&gt;We’re going to get a little more creative with our content now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Write a brief paragraph or page in markdown underneath your frontmatter on this post.&lt;/strong&gt; Try to use a variety of different markdown formatting tags to get used to them. If you skipped the tutorial earlier either jump into &lt;a href=&quot;https://www.markdowntutorial.com&quot;&gt;markdowntutorial.com&lt;/a&gt; or use the paragraph below as inspiration for your own.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Markdown Features
+## Text Features
+Markdown allows you to *emphasize*, **embolden**, or _underline_ text. You can even **combine these _together_**. Markdown also includes other crucial features like:
+
+- Lists
+  1. Ordered Lists
+  2. Unorderded Lists
+- [Links](http://google.com)
+- Inline `code`
+
+## Block features
+
+In addition to the text features there are a number of block features which create larger formatted objects.
+
+
+
+\```
+Code Block
+\```
+
+***
+
+Horizontal Rules
+
+***
+
+To seperate sections
+
+***
+
+
+| Tables | with | headings |
+|--------|------|----------|
+| and    | cell | content  |
+| even | if | its out of line |
+
+&amp;gt; Block quotes
+&amp;gt; even if they run over multiple lines
+&amp;gt;
+&amp;gt; Or have multiple paragraphs
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Save your completed content into your post and open up your post.&lt;/strong&gt; This is how ours looks with the content we’ve provided.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step4/complete-post.png&quot; alt=&quot;Our complete post&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;un-publishing-our-blog-post&quot;&gt;Un-publishing our blog post&lt;/h2&gt;
+
+&lt;p&gt;As we mentioned earlier, there are times when you’re preparing a blog post and may want your draft to remain unpublished. &lt;strong&gt;Change your frontmatter to unpublish this post:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title:  Yet another blog post
+date:   2018-11-14 23:00:00
+categories: test
+published: false
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you now refresh your page displaying the post it should provide you with only a &lt;code class=&quot;highlighter-rouge&quot;&gt;404 Not Found&lt;/code&gt; page, indicating that the post is no longer published to the website.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Set published to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; now to republish your post&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">In this step we’re going to create a blog post. This process is very similar to creating a page, but posts have a different filename format and different frontmatter.</summary></entry><entry><title type="html">Step 6</title><link href="/step6" rel="alternate" type="text/html" title="Step 6" /><published>2018-01-26T00:00:00+00:00</published><updated>2018-01-26T00:00:00+00:00</updated><id>/adding-images-and-more</id><content type="html" xml:base="/step6">&lt;p&gt;Now we’ve built a page and post in Jekyll we’ll have a look at some more advanced tasks and some of Jekyll’s cooler features.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Because Jekyll generates HTML and CSS for our website from our markdown content its not immediately obvious how we might add images and multimedia content.&lt;/p&gt;
+
+&lt;h3 id=&quot;storing-our-image&quot;&gt;Storing our image&lt;/h3&gt;
+
+&lt;p&gt;You can actually add images directly to your content in Markdown, but you need to provide your image file to Jekyll in a way that it understands that the image is needed by the generated website. To do that we can place this file in an &lt;code class=&quot;highlighter-rouge&quot;&gt;assets&lt;/code&gt; folder in the root.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a folder called &lt;code class=&quot;highlighter-rouge&quot;&gt;assets&lt;/code&gt; in the root of your Jekyll site. Next create a &lt;code class=&quot;highlighter-rouge&quot;&gt;images&lt;/code&gt; folder within this assets folder.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We can now add images to this &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/images&lt;/code&gt; directory which will be included in your generated website. You can add other subdirectories in the &lt;code class=&quot;highlighter-rouge&quot;&gt;assets&lt;/code&gt; folder for videos, fonts or even downloadable files.&lt;/p&gt;
+
+&lt;p&gt;**Add an image to your &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/images&lt;/code&gt; directory. In our example we’re going to use a NASA image of the &lt;a href=&quot;/assets/images/goldrenrecord.jpg&quot;&gt;Voyager I Spacecraft’s golden record&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When complete your Jekyll site directory should look something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── Gemfile
+├── Gemfile.lock
+├── _config.yml
+├── _posts
+│   ├── 2018-11-14-yet-another-post.md
+│   └── 2018-11-17-welcome-to-jekyll.markdown
+├── _site
+│     ...
+├── about.md
+├── assets
+│   └── images
+│       └── goldenrecord.jpg
+├── index.md
+└── mypage.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;adding-our-image-to-a-page&quot;&gt;Adding our image to a page&lt;/h3&gt;
+
+&lt;p&gt;To display our image on our Jekyll site we’re going to add it to the page we created earlier.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;mypage.md&lt;/code&gt; and at the bottom of the page insert the following block of markdown making sure you substitute the text between the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; characters:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ![&amp;lt;alternative text&amp;gt;](/assets/images/&amp;lt;filename&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In my example I’ve added the following to my &lt;code class=&quot;highlighter-rouge&quot;&gt;mypage.md&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ![NASA Voyager I Golden Record](/assets/images/goldenrecord.jpg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Although strictly optional adding text the alternate text box between the &lt;code class=&quot;highlighter-rouge&quot;&gt;[&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;]&lt;/code&gt; characters is recommended to provide a better experience for vision impaired users, or users who can’t load the image.&lt;/p&gt;
+
+&lt;h3 id=&quot;viewing-our-image&quot;&gt;Viewing our image&lt;/h3&gt;
+
+&lt;p&gt;Now, lets check out our &lt;code class=&quot;highlighter-rouge&quot;&gt;mypage.md&lt;/code&gt; file in our site. If you recall we gave this page a permalink, so either navigate to the page or open &lt;a href=&quot;http://localhost:4000/testpage&quot;&gt;http://localhost:4000/testpage&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You should be able to see the image rendered on the page at the bottom of your other content. If you image is large it may span the full width of the page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step5/image.png&quot; alt=&quot;The image displayed on our page&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;includes&quot;&gt;Includes&lt;/h2&gt;
+
+&lt;p&gt;One of the advantages of Jekyll’s generated nature is we can use some tricks to reduce repetition of content, making our website easier to maintain. &lt;em&gt;Includes&lt;/em&gt; are a feature that allow us to create content once, and display it in multiple places.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-an-includes&quot;&gt;Creating an includes&lt;/h3&gt;
+
+&lt;p&gt;Includes are files of content which can be compiled into other Jekyll files when they are generated. The files live in a folder called &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; in the root directory of the Jekyll site.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a folder called &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; in the root of your Jekyll site.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll create an includes which we can use to provide a prompt to email us.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create a file inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder called &lt;code class=&quot;highlighter-rouge&quot;&gt;email.md&lt;/code&gt;. Add the following content to the file:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Interested in finding out more? Email us at [info@devnq.org](mailto:info@devnq.org)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;using-our-includes&quot;&gt;Using our includes&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Back in our &lt;code class=&quot;highlighter-rouge&quot;&gt;mypage.md&lt;/code&gt;, above our image, add the following snippet of code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;email.md&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can add this includes snippets like this as many times as you want to any file in your Jekyll project. This allows you to easily create reusable elements and content which you can place anywhere on your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;viewing-our-includes&quot;&gt;Viewing our includes&lt;/h3&gt;
+
+&lt;p&gt;Refresh your tab, if it is still open, or navigate back to &lt;a href=&quot;http://localhost:4000/testpage&quot;&gt;http://localhost:4000/testpage&lt;/a&gt; to see how our includes has been rendered.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/step5/includes.png&quot; alt=&quot;The includes on our page&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;extending-includes&quot;&gt;Extending includes&lt;/h3&gt;
+
+&lt;p&gt;Includes are very powerful, and can even output variables and accept parameters. You can find more information on how this operates in the &lt;a href=&quot;https://jekyllrb.com/docs/includes/&quot;&gt;Jekyll Includes documentation&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Now we’ve built a page and post in Jekyll we’ll have a look at some more advanced tasks and some of Jekyll’s cooler features.</summary></entry><entry><title type="html">More you can do with Jekyll</title><link href="/step7" rel="alternate" type="text/html" title="More you can do with Jekyll" /><published>2018-01-25T00:00:00+00:00</published><updated>2018-01-25T00:00:00+00:00</updated><id>/more-to-do-with-jeykll</id><content type="html" xml:base="/step7">&lt;h1 id=&quot;liquid-tags&quot;&gt;Liquid Tags&lt;/h1&gt;
+
+&lt;p&gt;We’ve only scratched the surface on what the liquid templating engine in Jekyll can do with our &lt;em&gt;includes&lt;/em&gt;. Theres heaps more exciting content your can generate and explore with Jekyll’s liquid tags.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid templating language documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/liquid/filters/&quot;&gt;Additional Liquid features in Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;changing-your-theme&quot;&gt;Changing your theme&lt;/h1&gt;
+
+&lt;p&gt;Jekyll by default comes with gem-packaged themes. This means you can often simply install another theme by installing another Ruby gem. Check out more information on swapping out your theme!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;Changing your Jekyll gem-based theme&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/planetjekyll/awesome-jekyll-themes&quot;&gt;List of great gem-based themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;creating-a-custom-theme&quot;&gt;Creating a custom theme&lt;/h1&gt;
+
+&lt;p&gt;You can create your own custom themes for Jekyll. Check out this quick guide on creating your own.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.chrisanthropic.com/blog/2016/creating-gem-based-themes-for-jekyll/&quot;&gt;Creating your own gem-based theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hosting-your-jekyll-website&quot;&gt;Hosting your Jekyll Website&lt;/h2&gt;
+
+&lt;p&gt;Because Jekyll pre=generates all your content it provides very cheap to host content. There are many free and cheap ways to host your Jekyll websites!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/github-pages/&quot;&gt;Hosting for free on Github Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cagrimmett.com/development/2017/04/08/migrating-jekyll-to-s3-cloudfront.html&quot;&gt;Enterprise grade hosting with AWS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;We hope you found this tutorial useful and have enjoyed building your own Jekyll website.&lt;/p&gt;
+
+&lt;p&gt;This entire tutorial has been built in Jekyll and hosted on Github pages. How it has been built can be analysed from the source code hosted on Github.&lt;/p&gt;</content><author><name></name></author><summary type="html">Liquid Tags</summary></entry></feed>

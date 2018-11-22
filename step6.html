@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Jekyll</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+  <link rel="stylesheet" href="/assets/css/workshop.css" />
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/" class="logo"><strong>Jekyll</strong> <span>Building Blocks for a Brilliant Blog</span></a>
+</header>
+ 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Step 6 - Adding images and more...</h1>
+		</header>
+		
+		<p><p>Now we’ve built a page and post in Jekyll we’ll have a look at some more advanced tasks and some of Jekyll’s cooler features.</p>
+
+<h2 id="images">Images</h2>
+
+<p>Because Jekyll generates HTML and CSS for our website from our markdown content its not immediately obvious how we might add images and multimedia content.</p>
+
+<h3 id="storing-our-image">Storing our image</h3>
+
+<p>You can actually add images directly to your content in Markdown, but you need to provide your image file to Jekyll in a way that it understands that the image is needed by the generated website. To do that we can place this file in an <code class="highlighter-rouge">assets</code> folder in the root.</p>
+
+<p><strong>Create a folder called <code class="highlighter-rouge">assets</code> in the root of your Jekyll site. Next create a <code class="highlighter-rouge">images</code> folder within this assets folder.</strong></p>
+
+<p>We can now add images to this <code class="highlighter-rouge">assets/images</code> directory which will be included in your generated website. You can add other subdirectories in the <code class="highlighter-rouge">assets</code> folder for videos, fonts or even downloadable files.</p>
+
+<p>**Add an image to your <code class="highlighter-rouge">assets/images</code> directory. In our example we’re going to use a NASA image of the <a href="/assets/images/goldrenrecord.jpg">Voyager I Spacecraft’s golden record</a>.</p>
+
+<p>When complete your Jekyll site directory should look something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>├── Gemfile
+├── Gemfile.lock
+├── _config.yml
+├── _posts
+│   ├── 2018-11-14-yet-another-post.md
+│   └── 2018-11-17-welcome-to-jekyll.markdown
+├── _site
+│     ...
+├── about.md
+├── assets
+│   └── images
+│       └── goldenrecord.jpg
+├── index.md
+└── mypage.md
+</code></pre>
+</div>
+
+<h3 id="adding-our-image-to-a-page">Adding our image to a page</h3>
+
+<p>To display our image on our Jekyll site we’re going to add it to the page we created earlier.</p>
+
+<p><strong>Open <code class="highlighter-rouge">mypage.md</code> and at the bottom of the page insert the following block of markdown making sure you substitute the text between the <code class="highlighter-rouge">&lt;</code> and <code class="highlighter-rouge">&gt;</code> characters:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> ![&lt;alternative text&gt;](/assets/images/&lt;filename&gt;)
+</code></pre>
+</div>
+
+<p>In my example I’ve added the following to my <code class="highlighter-rouge">mypage.md</code> file</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> ![NASA Voyager I Golden Record](/assets/images/goldenrecord.jpg)
+</code></pre>
+</div>
+
+<p>Although strictly optional adding text the alternate text box between the <code class="highlighter-rouge">[</code> and <code class="highlighter-rouge">]</code> characters is recommended to provide a better experience for vision impaired users, or users who can’t load the image.</p>
+
+<h3 id="viewing-our-image">Viewing our image</h3>
+
+<p>Now, lets check out our <code class="highlighter-rouge">mypage.md</code> file in our site. If you recall we gave this page a permalink, so either navigate to the page or open <a href="http://localhost:4000/testpage">http://localhost:4000/testpage</a></p>
+
+<p>You should be able to see the image rendered on the page at the bottom of your other content. If you image is large it may span the full width of the page.</p>
+
+<p><img src="/assets/images/step5/image.png" alt="The image displayed on our page" /></p>
+
+<h2 id="includes">Includes</h2>
+
+<p>One of the advantages of Jekyll’s generated nature is we can use some tricks to reduce repetition of content, making our website easier to maintain. <em>Includes</em> are a feature that allow us to create content once, and display it in multiple places.</p>
+
+<h3 id="creating-an-includes">Creating an includes</h3>
+
+<p>Includes are files of content which can be compiled into other Jekyll files when they are generated. The files live in a folder called <code class="highlighter-rouge">_includes</code> in the root directory of the Jekyll site.</p>
+
+<p><strong>Create a folder called <code class="highlighter-rouge">_includes</code> in the root of your Jekyll site.</strong></p>
+
+<p>We’ll create an includes which we can use to provide a prompt to email us.</p>
+
+<p><strong>Create a file inside the <code class="highlighter-rouge">_includes</code> folder called <code class="highlighter-rouge">email.md</code>. Add the following content to the file:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Interested in finding out more? Email us at [info@devnq.org](mailto:info@devnq.org)
+</code></pre>
+</div>
+
+<h3 id="using-our-includes">Using our includes</h3>
+
+<p><strong>Back in our <code class="highlighter-rouge">mypage.md</code>, above our image, add the following snippet of code:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">email.md</span><span class="w">  </span><span class="err">%</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>You can add this includes snippets like this as many times as you want to any file in your Jekyll project. This allows you to easily create reusable elements and content which you can place anywhere on your website.</p>
+
+<h3 id="viewing-our-includes">Viewing our includes</h3>
+
+<p>Refresh your tab, if it is still open, or navigate back to <a href="http://localhost:4000/testpage">http://localhost:4000/testpage</a> to see how our includes has been rendered.</p>
+
+<p><img src="/assets/images/step5/includes.png" alt="The includes on our page" /></p>
+
+<h3 id="extending-includes">Extending includes</h3>
+
+<p>Includes are very powerful, and can even output variables and accept parameters. You can find more information on how this operates in the <a href="https://jekyllrb.com/docs/includes/">Jekyll Includes documentation</a>.</p>
+</p>
+    <footer style="position: relative; height: 45px; ">
+      
+        <a class="button special icon fa-arrow-left" href="/step5"  style="position: absolute; left: 0;">Previous Step</a>
+      
+      
+        <a class="button special icon fa-arrow-right" href="/step7" style="position: absolute; right: 0;">Next Step</a>
+      
+    </footer>
+	</div>
+</section>
+
+</div>
+
+    
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+				<li>&copy; DevNQ 2018 </li>
+        <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+				<li>Jekyll integration: <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
+        <li>The content of this workshop is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>/li>
+			</ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/skel.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
