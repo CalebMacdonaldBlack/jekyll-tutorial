@@ -3,6 +3,7 @@ layout: post
 title: Step 1
 description: Getting Started
 show_tile: true
+permalink: step1
 ---
 
 Getting started with Jekyll is super simple. In this step we're going to get the required tools configured and create the default Jekyll site. From here we'll get this serving from our computer and then admire our new site from a browser.

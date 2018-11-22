@@ -3,6 +3,7 @@ layout: post
 title: Step 6
 description: Adding images and more...
 show_tile: true
+permalink: step6
 ---
 
 Now we've built a page and post in Jekyll we'll have a look at some more advanced tasks and some of Jekyll's cooler features.

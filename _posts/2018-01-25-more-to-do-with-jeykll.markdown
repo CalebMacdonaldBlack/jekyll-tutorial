@@ -3,6 +3,7 @@ layout: post
 title: More you can do with Jekyll
 description: lots more...
 show_tile: true
+permalink: step7
 ---
 
 # Liquid Tags

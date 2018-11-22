@@ -3,6 +3,7 @@ layout: post
 title: Step 5
 description: Building our blog
 show_tile: true
+permalink: step5
 ---
 
 In this step we're going to create a blog post. This process is very similar to creating a page, but posts have a different filename format and different frontmatter.

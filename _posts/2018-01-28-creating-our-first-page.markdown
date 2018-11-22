@@ -3,6 +3,7 @@ layout: post
 title: Step 4
 description: Creating our first page
 show_tile: true
+permalink: step4
 ---
 
 To first understand how Jekyll pages are structured, we're going to have a look at the `about.md` page. This page represents a typical page in a Jekyll site.

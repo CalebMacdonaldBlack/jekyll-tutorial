@@ -3,6 +3,7 @@ layout: post
 title: Step 2
 description: A quick tour of Jekyll
 show_tile: true
+permalink: step2
 ---
 
 Next we're going to take a quick tour of the files Jekyll has generated for us, and how that is represented in the website.

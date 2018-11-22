@@ -3,6 +3,7 @@ layout: post
 title: Step 3
 description: Basic configuration
 show_tile: true
+permalink: step3
 ---
 
 The `_config.yml' file we found in our root is very important to how Jekyll generates our website. When our site is generated all the settings for this are read from here. There are many things you can configure in this file including the theme (by default a theme was added during our default setup), special custom options required by plugins or modules and advanced technical options.
